@@ -22,6 +22,11 @@ class DataProvider extends AbstractDataProvider
      * @var \Magento\Framework\App\Request\DataPersistorInterface
      */
     protected $dataPersistor;
+
+    /**
+     * @var array
+     */
+    protected $loadedData;
     
     public function __construct(
         $name, 
@@ -43,5 +48,30 @@ class DataProvider extends AbstractDataProvider
         );
     }
     
-    
+    /**
+     * Get data
+     *
+     * @return array
+     */
+    public function getData()
+    {
+        if (isset($this->loadedData)) {
+            return $this->loadedData;
+        }
+        $items = $this->collection->getItems();
+        /** @var \Magento\Cms\Model\Block $block */
+        foreach ($items as $block) {
+            $this->loadedData[$block->getId()] = $block->getData();
+        }
+
+        $data = $this->dataPersistor->get('cms_block');
+        if (!empty($data)) {
+            $block = $this->collection->getNewEmptyItem();
+            $block->setData($data);
+            $this->loadedData[$block->getId()] = $block->getData();
+            $this->dataPersistor->clear('cms_block');
+        }
+
+        return $this->loadedData;
+    }
 }

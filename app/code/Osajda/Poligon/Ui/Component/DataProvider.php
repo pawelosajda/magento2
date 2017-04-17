@@ -2,49 +2,29 @@
 
 namespace Osajda\Poligon\Ui\Component;
 
-use Magento\Framework\Api\FilterBuilder;
-use Magento\Framework\Api\Search\SearchCriteriaBuilder;
-use Magento\Framework\App\RequestInterface;
-use Magento\Framework\View\Element\UiComponent\DataProvider\Reporting;
+use Osajda\Poligon\Model\ResourceModel\Post\CollectionFactory;
 
 /**
  * Description of DataProvider
  *
  * @author pawel
  */
-class DataProvider extends \Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider
+class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
-    /**
-     * @param string $name
-     * @param string $primaryFieldName
-     * @param string $requestFieldName
-     * @param Reporting $reporting
-     * @param SearchCriteriaBuilder $searchCriteriaBuilder
-     * @param RequestInterface $request
-     * @param FilterBuilder $filterBuilder
-     * @param array $meta
-     * @param array $data
-     */
     public function __construct(
-        $name,
-        $primaryFieldName,
-        $requestFieldName,
-        Reporting $reporting,
-        SearchCriteriaBuilder $searchCriteriaBuilder,
-        RequestInterface $request,
-        FilterBuilder $filterBuilder,
-        array $meta = [],
+        $name, 
+        $primaryFieldName, 
+        $requestFieldName, 
+        CollectionFactory $collectionFactory,
+        array $meta = [], 
         array $data = []
     ) {
+        $this->collection = $collectionFactory->create();
         parent::__construct(
-            $name,
-            $primaryFieldName,
-            $requestFieldName,
-            $reporting,
-            $searchCriteriaBuilder,
-            $request,
-            $filterBuilder,
-            $meta,
+            $name, 
+            $primaryFieldName, 
+            $requestFieldName, 
+            $meta, 
             $data
         );
     }

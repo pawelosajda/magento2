@@ -96,5 +96,12 @@
                 </item>
             </argument>
         </column>
+        <actionsColumn name="actions" class="Osajda\Poligon\Ui\Component\Listing\Column\PostActions">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">block_id</item>
+                </item>
+            </argument>
+        </actionsColumn>
     </columns>
 </listing>

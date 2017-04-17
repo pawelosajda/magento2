@@ -8,9 +8,7 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="osajda_poligon_post_listing_data_source" xsi:type="string">
-                    Osajda\Poligon\Model\ResourceModel\Post\Grid\Collection
-                </item>
+                <item name="osajda_poligon_post_listing_data_source" xsi:type="string">Osajda\Poligon\Model\ResourceModel\Post\Grid\Collection</item>
             </argument>
         </arguments>
     </type>
