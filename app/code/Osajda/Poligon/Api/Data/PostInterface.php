@@ -8,6 +8,7 @@ namespace Osajda\Poligon\Api\Data;
 interface PostInterface
 {
     const POST_ID = 'post_id';
+    const USER_ID = 'user_id';
     const TITLE = 'title';
     const SLUG = 'slug';
     const CONTENT = 'content';
@@ -15,6 +16,7 @@ interface PostInterface
     const UPDATE_TIME = 'update_time';
     
     public function getId();
+    public function getUserId();
     public function getTitle(): string;
     public function getSlug(): string;
     public function getContent(): string;
@@ -22,6 +24,7 @@ interface PostInterface
     public function getUpdateTime(): string;
     
     public function setId($postId);
+    public function setUserId(int $userId);
     public function setTitle(string $title): PostInterface;
     public function setSlug(string $slug): PostInterface;
     public function setContent(string $content): PostInterface;

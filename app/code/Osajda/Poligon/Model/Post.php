@@ -98,4 +98,15 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
         $this->setData(self::UPDATE_TIME, $updateTime);
         return $this;
     }
+
+    public function getUserId()
+    {
+        return $this->getData(self::USER_ID);
+    }
+
+    public function setUserId(int $userId)
+    {
+        $this->setData(self::USER_ID, $userId);
+        return $this;
+    }
 }
