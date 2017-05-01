@@ -1,13 +1,13 @@
 <?php
 
-namespace Osajda\Blog\Controller\Adminhtml\Index;
+namespace Osajda\Blog\Controller\Adminhtml\Post;
 
 /**
  * Description of Index
  *
  * @author pawel
  */
-class Index extends \Magento\Backend\App\Action
+class NewAction extends \Osajda\Blog\Controller\Adminhtml\Post
 {
     /**
      * @var \Magento\Framework\View\Result\PageFactory
@@ -32,7 +32,6 @@ class Index extends \Magento\Backend\App\Action
     public function execute()
     {
         $page = $this->_pageFactory->create();
-        $page->setActiveMenu('Osajda_Blog::blog_post');
         return $page;
     }
 }

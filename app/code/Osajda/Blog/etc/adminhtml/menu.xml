@@ -2,6 +2,6 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Osajda_Blog::blog" title="Blog" translate="title" module="Osajda_Blog" sortOrder="10" resource="Osajda_Blog::blog" />
-        <add id="Osajda_Blog::blog_post" title="Posts" translate="title" module="Osajda_Blog" sortOrder="10" resource="Osajda_Blog::blog_post" parent="Osajda_Blog::blog" action="blog/index/index" />
+        <add id="Osajda_Blog::blog_post" title="Posts" translate="title" module="Osajda_Blog" sortOrder="10" resource="Osajda_Blog::blog_post" parent="Osajda_Blog::blog" action="blog/post/index" />
     </menu>
 </config>
