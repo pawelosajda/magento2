@@ -9,7 +9,7 @@ namespace Training\Basic\Model\ResourceModel\Post;
  */
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
-    protected $_idFieldName = \Training\Basic\Api\Data\Post::ID;
+    protected $_idFieldName = \Training\Basic\Api\Data\PostInterface::ID;
     
     protected function _construct()
     {

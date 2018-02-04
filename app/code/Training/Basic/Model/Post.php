@@ -7,7 +7,7 @@ namespace Training\Basic\Model;
  *
  * @author pawel
  */
-class Post extends \Magento\Framework\Model\AbstractModel implements \Training\Basic\Api\Data\Post
+class Post extends \Magento\Framework\Model\AbstractModel implements \Training\Basic\Api\Data\PostInterface
 {
     protected function _construct()
     {

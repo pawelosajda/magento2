@@ -13,6 +13,6 @@ class Post extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
     
     protected function _construct()
     {
-        $this->_init(self::MAIN_TABLE, \Training\Basic\Api\Data\Post::ID);
+        $this->_init(self::MAIN_TABLE, \Training\Basic\Api\Data\PostInterface::ID);
     }
 }

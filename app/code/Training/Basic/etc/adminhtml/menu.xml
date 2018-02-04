@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add 
+            id="Training_Basic::basic" 
+            title="Training" 
+            translate="title" 
+            module="Training_Basic" 
+            sortOrder="0"  
+            resource="Training_Basic::basic"
+        />
+        <add 
+            id="Training_Basic::basic_post" 
+            title="Posts" 
+            translate="title" 
+            module="Training_Basic" 
+            sortOrder="0" 
+            parent="Training_Basic::basic"
+            action="basic/post" 
+            resource="Training_Basic::basic_post"
+        />
+    </menu>
+</config>
